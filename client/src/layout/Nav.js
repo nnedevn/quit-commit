@@ -27,9 +27,7 @@ class Nav extends Component {
             <a href="/">Home</a>
             {links}
           </nav>
-          <header className="App-header">
-            <img src={logo} className="App-logo" alt="logo" />
-            <h1 className="App-title">Welcome to MERN Stack Boilerplate!</h1>
+          
           </header>
         </div>
       );
