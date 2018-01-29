@@ -28,7 +28,8 @@ class Nav extends Component {
             {links}
           </nav>
           <header className="App-header">
-            
+           
+          </header>
         </div>
       );
   }
