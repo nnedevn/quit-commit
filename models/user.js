@@ -42,7 +42,9 @@ userSchema.set('toJSON', {
       name: ret.name,
       cigsPerDay: ret.cigsPerDay,
       yearsSmoked: ret.yearsSmokedm,
-      quitDate: ret.quitDate
+      quitDate: ret.quitDate,
+      cigsPerDay: ret.cigsPerDay,
+      yearsSmoked: ret.yearsSmoked
     };
     return returnJson;
   }
