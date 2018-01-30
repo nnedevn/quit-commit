@@ -5,7 +5,7 @@ const Articles = (props) => {
   const options = props.results.map((item)=>(
     <li>
       <h2>{item.data.title}</h2>
-      <a>{item.data.url}</a>
+      <a href={item.data.url}>{item.data.url}</a>
       <p>{item.data.selftext}</p>
     </li>
   ))
@@ -20,16 +20,14 @@ class Stories extends Component{
     }
   }
 
-  getInfo = () => {
+  render(){
+
   axios.get(`https://www.reddit.com/r/stopsmoking/new.json?sort=new`)
     .then(({data})=>{
       this.setState({
         articles: data.data.children
       })
     })
-  }
-
-  render(){
 
     return(
       <div>
