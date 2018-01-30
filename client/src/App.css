@@ -121,7 +121,7 @@ nav a:hover {
   height: 100%;
   position: fixed;
   top: 0;
-  background: #333;
+  background: #555;
   color: #f3f3f3;
   transition: 0.4s ease-out;
 }
@@ -150,7 +150,6 @@ nav a:hover {
   transition: all 0.3s;
 }
 .overlay--open {
-  opacity: 1;
   visibility: visible;
 }
 .outer-container {
@@ -158,9 +157,20 @@ nav a:hover {
 }
 .button-wrap {
   position: fixed;
-  top: 36px;
-  right: 36px;
+  top: 10px;
+  left: 15px;
 }
+
+
+
+.box-shadow-menu {
+height: 20px;
+width: 20px;
+background: url('http://freevector.co/wp-content/uploads/2014/06/56763-menu-button-of-three-horizontal-lines.png');
+background-size: contain;
+border: inherit
+}
+
 html, body {
   height: 100%;
   margin: 0;
