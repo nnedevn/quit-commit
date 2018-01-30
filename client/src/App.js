@@ -7,6 +7,7 @@ import Flash from './layout/Flash.js';
 import Footer from './layout/Footer.js';
 import Home from './Home.js';
 import Nav from './layout/Nav.js';
+import Mainsidebar from './layout/Sidebar.js';
 import Login from './auth/Login.js';
 import Signup from './auth/Signup.js';
 import Stats from './pages/Stats.js';
@@ -79,6 +80,7 @@ class App extends Component {
         <Router>
           <div>
             <Nav user={this.state.user} updateUser={this.getUser} />
+            <Mainsidebar />
             <div className="space">
               <Flash flashType={this.state.flashType} flash={this.state.flash} setFlash={this.setFlash} cancelFlash={this.cancelFlash} />
               <Route exact path="/" component={Home} />
