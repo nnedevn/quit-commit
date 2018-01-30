@@ -20,23 +20,36 @@ var userSchema = new mongoose.Schema({
     required: true,
     minlength: 6,
     maxlength: 99
+  },
+  cigsPerDay: {
+    type: Number,
+  },
+  yearsSmoked: {
+    type: Number,
+  },
+  quitDate: {
+    type: Date,
   }
+
 });
 
 // Override 'toJSON' to prevent the password from being returned with the user
 userSchema.set('toJSON', {
-  transform: function(doc, ret, options) {
+  transform: function (doc, ret, options) {
     var returnJson = {
       id: ret._id,
       email: ret.email,
-      name: ret.name
+      name: ret.name,
+      cigsPerDay: ret.cigsPerDay,
+      yearsSmoked: ret.yearsSmokedm,
+      quitDate: ret.quitDate
     };
     return returnJson;
   }
 });
 
-userSchema.methods.authenticated = function(password, callback) {
-  bcrypt.compare(password, this.password, function(err, res) {
+userSchema.methods.authenticated = function (password, callback) {
+  bcrypt.compare(password, this.password, function (err, res) {
     if (err) {
       callback(err);
     } else {
@@ -46,7 +59,7 @@ userSchema.methods.authenticated = function(password, callback) {
 }
 
 // Mongoose's version of a beforeCreate hook
-userSchema.pre('save', function(next) {
+userSchema.pre('save', function (next) {
   var hash = bcrypt.hashSync(this.password, 10);
   // store the hash as the user's password
   this.password = hash;
