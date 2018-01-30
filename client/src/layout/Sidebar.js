@@ -33,9 +33,27 @@ class Mainsidebar extends React.Component {
       overlay: 'overlay',
       push: 'push',
     }
-    const navItems = ['item1', 'item2', 'item3', 'item4', 'item5'];
-    const items = navItems.map((item, i) =>
-      <li key={i}>{item}</li>
+    const links = (
+      <ul className="sidebarlinks">
+        <li>
+          <Link to="/stats">Stats</Link>
+        </li>
+        <li>
+          <Link to="/journal">Journal</Link>
+        </li>
+        <li>
+          <Link to="/reward">Reward</Link>
+        </li>
+        <li>
+          <Link to="/connect">Connect</Link>
+        </li>
+        <li>
+          <Link to="/articles">Articles</Link>
+        </li>
+        <li>
+          <Link to="/stories">Stories</Link>
+        </li>
+      </ul>
     );
     return (
       <div className='outer-container'>
@@ -45,10 +63,9 @@ class Mainsidebar extends React.Component {
           slideFrom={slideFrom.left}
           width={this.state.sidebarWidth}
         >
-          <ul>{items}</ul>
+           {links}
         </Sidebar>
         <Content transition={transitionTypes.push} sidebarWidth={this.state.sidebarWidth}>
-          <h2>Sidebar</h2>
         </Content>
         <SideBarTarget toggleSidebar={this.handleViewSidebar}>
           <button>Toggle</button>
