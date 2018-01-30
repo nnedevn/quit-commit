@@ -64,6 +64,16 @@ class Signup extends Component {
                      value={this.state.password}
                      onChange={this.handlePasswordChange} />
                  </div>
+                 <div>
+                    <input name="Amount"
+                       placeholder="How many cigarettes did you smoke a day?"
+                       type="integer" />
+                   </div>
+                   <div>
+                      <input name="Duration"
+                         placeholder="How many years did you smoke?"
+                         type="integer" />
+                     </div>
                  <input type="submit" value="Sign up!" className="btn-primary" />
               </form>);
     }

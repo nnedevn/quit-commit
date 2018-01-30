@@ -8,10 +8,22 @@ class Nav extends Component {
     let links = <span />;
     if(this.props.user){
       links = (
-        <span>
-          <Link to="/profile">Profile</Link>
-          <Logout updateUser={this.props.updateUser} />
-        </span>);
+        <div>
+          <span>
+            <Link to="/profile">Profile</Link>
+            <Logout updateUser={this.props.updateUser} />
+          </span>
+          <sidebar className="sidebar">
+            <div className="sidebar-text">
+              <h3>Stats</h3>
+              <h3>Journal</h3>
+              <h3>Reward</h3>
+              <h3>Connect</h3>
+              <h3>Articles</h3>
+              <h3>Stories</h3>
+            </div>
+          </sidebar>
+        </div>);
     }
     else {
       links = (
@@ -27,9 +39,6 @@ class Nav extends Component {
             <a href="/">Home</a>
             {links}
           </nav>
-          <header className="App-header">
-           
-          </header>
         </div>
       );
   }
