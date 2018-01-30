@@ -7,8 +7,13 @@ import Footer from './layout/Footer.js';
 import Home from './Home.js';
 import Nav from './layout/Nav.js';
 import Login from './auth/Login.js';
-import Profile from './Profile.js';
 import Signup from './auth/Signup.js';
+import Stats from './pages/Stats.js';
+import Journal from './pages/Journal.js';
+import Reward from './pages/Reward.js';
+import Connect from './pages/Connect.js';
+import Articles from './pages/Articles.js';
+import Stories from './pages/Stories.js';
 
 class App extends Component {
   constructor(props){
@@ -80,8 +85,18 @@ class App extends Component {
                 () => (<Login user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
               <Route path="/signup" component={
                 () => (<Signup user={this.state.user} setFlash={this.setFlash} updateUser={this.getUser} />)} />
-              <Route path="/profile" component={
-                () => (<Profile user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route exact path="/stats" component={
+                () => (<Stats user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/journal" component={
+                () => (<Journal user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/reward" component={
+                () => (<Reward user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/connect" component={
+                () => (<Connect user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/articles" component={
+                () => (<Articles user={this.state.user} setFlash={this.setFlash} />)} />
+              <Route path="/stories" component={
+                () => (<Stories user={this.state.user} setFlash={this.setFlash} />)} />
             </div>
           </div>
         </Router>

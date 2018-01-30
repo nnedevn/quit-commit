@@ -15,12 +15,12 @@ class Nav extends Component {
           </span>
           <sidebar className="sidebar">
             <div className="sidebar-text">
-              <h3>Stats</h3>
-              <h3>Journal</h3>
-              <h3>Reward</h3>
-              <h3>Connect</h3>
-              <h3>Articles</h3>
-              <h3>Stories</h3>
+              <Link to="/stats">Stats</Link>
+              <Link to="/journal">Journal</Link>
+              <Link to="/reward">Reward</Link>
+              <Link to="/connect">Connect</Link>
+              <Link to="/articles">Articles</Link>
+              <Link to="/stories">Stories</Link>
             </div>
           </sidebar>
         </div>);
