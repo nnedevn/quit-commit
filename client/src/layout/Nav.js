@@ -11,18 +11,10 @@ class Nav extends Component {
         <div>
           <span>
             <Link to="/profile">Profile</Link>
+          </span>
+          <span>
             <Logout updateUser={this.props.updateUser} />
           </span>
-          <sidebar className="sidebar">
-            <div className="sidebar-text">
-              <Link to="/stats">Stats</Link>
-              <Link to="/journal">Journal</Link>
-              <Link to="/reward">Reward</Link>
-              <Link to="/connect">Connect</Link>
-              <Link to="/articles">Articles</Link>
-              <Link to="/stories">Stories</Link>
-            </div>
-          </sidebar>
         </div>);
     }
     else {
