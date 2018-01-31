@@ -3,12 +3,12 @@ import axios from 'axios'
 
 const Articles = (props) => {
   const options = props.results.map((item)=>(
-    <li className="stories-li">
+    <div className="stories-in">
       <a href={item.data.url}><h2>{item.data.title}</h2></a>
       <p>{item.data.selftext}</p>
-    </li>
+    </div>
   ))
-  return <ul className="stories-ul">{options}</ul>
+  return <div className="stories-out">{options}</div>
 }
 
 class Stories extends Component{
