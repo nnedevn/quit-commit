@@ -68,7 +68,7 @@ class Mainsidebar extends React.Component {
         <Content transition={transitionTypes.push} sidebarWidth={this.state.sidebarWidth}>
         </Content>
         <SideBarTarget toggleSidebar={this.handleViewSidebar}>
-          <button>Toggle</button>
+          <button className="box-shadow-menu"></button>
         </SideBarTarget>
       </div>
     )
