@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-
-class Journal extends Component{
-  render(){
-    return(
+import JournalSubmitForm from './JournalSubmitForm';
+class Journal extends Component {
+  render() {
+    return (
       <div>
-        <h2>Journal page</h2>
+        <JournalSubmitForm user={this.props.user}/>
       </div>
     );
   }
