@@ -3,13 +3,13 @@ import Feed from 'rss-to-json';
 
 const Artic = (props) => {
   const options = props.results.map((item)=>(
-    <li>
+    <li className="article-li">
       <h2>{item.title}</h2>
       <a href={item.url}>{item.url}</a>
       <div dangerouslySetInnerHTML={{ __html: item.description }} />
     </li>
   ))
-  return <ul>{options}</ul>
+  return <ul className="article-ul">{options}</ul>
 }
 
 class Articles extends Component{
