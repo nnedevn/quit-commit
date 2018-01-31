@@ -121,7 +121,7 @@ nav a:hover {
   height: 100%;
   position: fixed;
   top: 0;
-  background: #555;
+  background: rgba(0,0,0,0.5);
   color: #f3f3f3;
   transition: 0.4s ease-out;
 }
