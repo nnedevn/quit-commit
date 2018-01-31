@@ -1,26 +1,26 @@
 import React, { Component } from 'react';
 
 class Stats extends Component {
-  constructor() {
-    super();
+  constructor(props) {
+    super(props);
     this.state = {
       quitDateEpoch: null,
-      rightNowEpoch:'',
+      rightNowEpoch: '',
       days: '',
       hours: '',
-      mins:'',
+      mins: '',
       seconds: ''
     }
   }
 
-  tick = () =>{
+  tick = () => {
     let msecPerMin = 60 * 1000;
     let msecPerHour = msecPerMin * 60;
     let msecPerDay = 24 * msecPerHour;
 
     let currentDateEpoch = new Date().getTime();
     let interval = currentDateEpoch - this.state.quitDateEpoch;
-  
+
     let days = Math.floor(interval / msecPerDay);
     interval = interval - days * msecPerDay;
     let hours = Math.floor(interval / msecPerHour);
@@ -29,38 +29,33 @@ class Stats extends Component {
     interval -= mins * msecPerMin;
     let seconds = Math.floor(interval / 1000);
 
-    console.log('days generated:', days);
     this.setState({
       rightNowEpoch: currentDateEpoch,
       days: days,
       hours: hours,
-      mins:mins,
+      mins: mins,
       seconds: seconds
     });
 
-
-    console.log('days from state: ', this.state.days);
   }
 
-  componentWillMount(){
+  componentWillMount() {
     let quitDateToEpoch = new Date(this.props.user.quitDate).getTime();
     this.setState({
       quitDateEpoch: quitDateToEpoch
     })
   }
-  componentDidMount(){
+  componentDidMount() {
     this.timerId = setInterval(this.tick, 1000);
   }
 
-  componentWillUnmount(){
+  componentWillUnmount() {
     // TODO: Stop the timer just in case;
   }
-  
+
   render() {
     if (this.props.user && this.props.user.name) {
       return (<div>
-
-
 
         <h2>HELLO AGAIN {this.props.user.name}!</h2>
         <div>{this.state.quitDateEpoch}</div>
@@ -68,6 +63,7 @@ class Stats extends Component {
         <h4>You've been smoking for {this.props.user.yearsSmoked} years</h4>
         <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
         <h1>Stats page</h1>
+        
       </div>);
     }
     else {
