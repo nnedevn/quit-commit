@@ -17,18 +17,15 @@ class Connect extends Component{
     });
 
     const addMessage = data => {
-        console.log(data);
         this.setState({messages: [...this.state.messages, data]});
-        console.log(this.state.messages);
     };
 
     this.sendMessage = ev => {
         ev.preventDefault();
         this.socket.emit('SEND_MESSAGE', {
-            author: this.state.username,
+            author: this.props.user.name,
             message: this.state.message
         });
-        console.log(this.state.message);
         this.setState({message: ''});
     }
 
@@ -37,11 +34,12 @@ class Connect extends Component{
   render(){
       return (
           <div className="container">
+              <div className="chat">
               <div className="row">
-                  <div className="col-4">
+                  <div className="col align-self-center">
                       <div className="card">
                           <div className="card-body">
-                              <div className="card-title">Global Chat</div>
+                              <div className="card-title">Global Support Chat for {this.props.user.name}</div>
                               <hr/>
                               <div className="messages">
                                 {this.state.messages.map(message => {
@@ -53,7 +51,7 @@ class Connect extends Component{
                           </div>
                           <div className="card-footer">
                               <form className="subForm" onSubmit={this.sendMessage}>
-                                <input type="text" placeholder="Username" value={this.state.username} onChange={ev => this.setState({username: ev.target.value})} className="form-control"/>
+                                <input type="hidden" placeholder="Username" />
                                 <br/>
                                 <input type="text" placeholder="Message" value={this.state.message} onChange={ev => this.setState({message: ev.target.value})} className="form-control"/>
                                 <br/>
@@ -62,6 +60,7 @@ class Connect extends Component{
                           </div>
                       </div>
                   </div>
+              </div>
               </div>
           </div>
       );

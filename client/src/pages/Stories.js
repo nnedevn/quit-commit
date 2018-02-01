@@ -23,8 +23,10 @@ class Stories extends Component{
 
   axios.get(`https://www.reddit.com/r/stopsmoking/new.json?sort=new`)
     .then(({data})=>{
+      let array = data.data.children
+      let filteredResults = array.filter((item) => !(item.data.selftext === ''))
       this.setState({
-        articles: data.data.children
+        articles: filteredResults
       })
     })
 

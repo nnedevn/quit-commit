@@ -156,9 +156,7 @@ nav a:hover {
   visibility: hidden;
   transition: all 0.3s;
 }
-.overlay--open {
-  visibility: visible;
-}
+
 .outer-container {
   height: 100%;
 }
@@ -194,20 +192,40 @@ html {
   box-sizing: inherit;
 }
 
+.btn-circle {
+  width: 80px;
+  height: 80px;
+  padding: 6px 0px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42857;
+  color: blue;
+  font-size: 24px;
+  position: fixed;
+  bottom: 80px;
+  right: 60px;
+  z-index: 10;
+}
+
+.lower-right-buttons {
+  position: relative;
+}
+
 .stories-in {
   width: 95%;
   height: 350px;
   overflow: scroll;
   margin: 10px 20px 15px 20px;
   padding: 10px 5px;
-
-  border: 1px solid black;
+  border: 6px solid white;
   border-radius: 20px;
   display: grid;
   list-style: none;
   text-align: center;
   align-self: center;
   justify-self: center;
+  font-size: 16px;
 }
 
 .stories-in a {
@@ -224,9 +242,9 @@ html {
   width: 95%;
   height: 350px;
   overflow: scroll;
-  margin: 5% 0% 0% 5%;
+  margin: 2.5% 0% 0% 2.5%;
   padding: 10px 5px;
-  border: 1px solid black;
+  border: 6px solid white;
   border-radius: 20px;
   display: grid;
 }
@@ -244,6 +262,16 @@ html {
   display: grid;
 }
 
+
+.chat {
+  height: 400px;
+  padding: 10px 40px;
+  border: 6px solid white;
+  border-radius: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
+
 .uploadbtn {
   color: black;
   border-radius: 4px;
@@ -259,7 +287,3 @@ html {
   margin-right: 5px;
 }
 
-iframe {
-  text-align: center;
-  justify-content: center;
-}
