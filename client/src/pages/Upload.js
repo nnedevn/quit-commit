@@ -16,7 +16,7 @@ class Upload extends Component {
         window.cloudinary.openUploadWidget({ cloud_name: 'spaceviking', upload_preset: 'u6iawft7', tags:[]},
             function(error, result) {
              base.setState({imageUrl: result[0].secure_url});
-             console.log(base.state.imageUrl)
+             base.props.getUrl(base.state.imageUrl);
             });
       }
 
