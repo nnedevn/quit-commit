@@ -49,7 +49,8 @@ userSchema.set('toJSON', {
       yearsSmoked: ret.yearsSmokedm,
       quitDate: ret.quitDate,
       cigsPerDay: ret.cigsPerDay,
-      yearsSmoked: ret.yearsSmoked
+      yearsSmoked: ret.yearsSmoked,
+      journalEntries: ret.journalEntries
     };
     return returnJson;
   }
