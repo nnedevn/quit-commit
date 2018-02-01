@@ -157,9 +157,7 @@ nav a:hover {
   visibility: hidden;
   transition: all 0.3s;
 }
-.overlay--open {
-  visibility: visible;
-}
+
 .outer-container {
   height: 100%;
 }
@@ -195,13 +193,14 @@ html {
   overflow: scroll;
   margin: 10px 20px 15px 20px;
   padding: 10px 5px;
-  border: 1px solid black;
+  border: 6px solid white;
   border-radius: 20px;
   display: grid;
   list-style: none;
   text-align: center;
   align-self: center;
   justify-self: center;
+  font-size: 16px;
 }
 
 .stories-in a {
@@ -218,9 +217,9 @@ html {
   width: 95%;
   height: 350px;
   overflow: scroll;
-  margin: 5% 0% 0% 5%;
+  margin: 2.5% 0% 0% 2.5%;
   padding: 10px 5px;
-  border: 1px solid black;
+  border: 6px solid white;
   border-radius: 20px;
   display: grid;
 }
@@ -238,7 +237,12 @@ html {
   display: grid;
 }
 
-iframe {
-  text-align: center;
-  justify-content: center;
+.chat {
+  height: 400px;
+  padding: 10px 40px;
+  border: 6px solid white;
+  border-radius: 20px;
+  overflow: scroll;
+  display: flex;
+  flex-direction: column-reverse;
 }
