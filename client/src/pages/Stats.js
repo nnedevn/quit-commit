@@ -68,6 +68,8 @@ class Stats extends Component {
         <h4>You would have spent an extra ${moneyNotSpent} </h4>
         <h4>You've been smoking for {this.props.user.yearsSmoked} years</h4>
         <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
+        <img src={this.props.user.rewards[0].rewardUrl}  />
+
         <h1>Stats page</h1>
 
       </div>);

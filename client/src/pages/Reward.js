@@ -19,6 +19,8 @@ class Reward extends Component {
         rewardUrl: this.state.url,
         rewardPrice: this.state.price,
         userId: this.props.user.id
+      }).then(function(){
+        window.location = "/reward";
       });
   }
 
