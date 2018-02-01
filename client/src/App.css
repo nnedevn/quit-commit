@@ -243,6 +243,21 @@ html {
   display: grid;
 }
 
+.uploadbtn {
+  color: black;
+  border-radius: 4px;
+  padding: 0 8px;
+}
+
+.reward-desc {
+  color: white;
+}
+
+.dollasign {
+  font-size: 28px;
+  margin-right: 5px;
+}
+
 iframe {
   text-align: center;
   justify-content: center;

@@ -23,8 +23,8 @@ class Upload extends Component {
       render(){
         return(
           <div>
-            <div className="uploadbtn">
-              <button onClick={this.uploadWidget}>Upload a Pic</button>
+            <div>
+              <button className="uploadbtn" onClick={this.uploadWidget}>Upload a Pic</button>
             </div>
             <img className="div--cloud__image" src={this.state.imageUrl} />
           </div>
