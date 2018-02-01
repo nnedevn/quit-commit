@@ -34,8 +34,11 @@ var userSchema = new mongoose.Schema({
     moodRating: {type:Number},
     journalEntry:{type:String},
     createdOn:{type:Date}
+  }],
+  rewards: [{
+    rewardPrice: {type:Number},
+    rewardUrl: {type:String}
   }]
-
 });
 
 // Override 'toJSON' to prevent the password from being returned with the user
@@ -50,7 +53,8 @@ userSchema.set('toJSON', {
       quitDate: ret.quitDate,
       cigsPerDay: ret.cigsPerDay,
       yearsSmoked: ret.yearsSmoked,
-      journalEntries: ret.journalEntries
+      journalEntries: ret.journalEntries,
+      rewards: ret.rewards
     };
     return returnJson;
   }

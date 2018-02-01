@@ -272,6 +272,7 @@ html {
   display: flex;
   flex-direction: column-reverse;
 }
+
 .uploadbtn {
   color: black;
   border-radius: 4px;
@@ -286,4 +287,3 @@ html {
   font-size: 28px;
   margin-right: 5px;
 }
-

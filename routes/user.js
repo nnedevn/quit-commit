@@ -23,11 +23,34 @@ router.put('/journal/new', function (req, res) {
           console.log(user);
           res.json({user:user})
         })
-        
+
         console.log(numAffected);
       }
     }
   )
+
+});
+
+router.put('/reward', function(req, res){
+
+//   console.log(req.body)
+// User.findOne({"_id": req.body.userId}).then(function(user){
+//   console.log(user);
+// })
+
+  User.update(
+    { "_id": req.body.userId },
+  {
+    $push: {
+      "rewards":{
+        "rewardUrl": req.body.rewardUrl,
+        "rewardPrice": req.body.rewardPrice
+        }
+    }
+  },
+    function(err, numAffected) {
+      console.log(numAffected);
+    });
 
 });
 
