@@ -14,7 +14,6 @@ a {
   width: 100%;
   background-color: white;
   padding: 10px 0;
-  z-index: -1;
 }
 
 nav a {
@@ -120,7 +119,6 @@ nav a:hover {
 .sidebarlinks li a {
   margin: 20px 0;
   line-height: 20px;
-  z-index: 99;
 }
 
 .sidebar {
@@ -175,6 +173,12 @@ width: 20px;
 background: url('http://freevector.co/wp-content/uploads/2014/06/56763-menu-button-of-three-horizontal-lines.png');
 background-size: contain;
 border: inherit
+}
+
+.div--cloud__image {
+  max-height: 350px;
+  border: 4px solid white;
+  border-radius: 5px;
 }
 
 html, body {
