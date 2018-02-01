@@ -19,14 +19,16 @@ router.put('/journal/new', function (req, res) {
       if (err) {
         console.log(err)
       } else {
-        res.send()
+        User.findOne({"_id": req.body.userId}, function(err,user){
+          console.log(user);
+          res.json({user:user})
+        })
+        
         console.log(numAffected);
       }
     }
   )
 
-
 });
 
 module.exports = router;
-
