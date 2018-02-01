@@ -25,6 +25,8 @@ router.put('/journal/new', function (req, res) {
     }
   )
 
+
 });
 
 module.exports = router;
+

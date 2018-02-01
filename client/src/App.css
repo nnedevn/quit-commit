@@ -14,7 +14,6 @@ a {
   width: 100%;
   background-color: white;
   padding: 10px 0;
-  z-index: -1;
 }
 
 nav a {
@@ -120,7 +119,6 @@ nav a:hover {
 .sidebarlinks li a {
   margin: 20px 0;
   line-height: 20px;
-  z-index: 99;
 }
 
 .sidebar {
@@ -177,6 +175,12 @@ background-size: contain;
 border: inherit
 }
 
+.div--cloud__image {
+  max-height: 350px;
+  border: 4px solid white;
+  border-radius: 5px;
+}
+
 html, body {
   height: 100%;
   margin: 0;
@@ -195,6 +199,7 @@ html {
   overflow: scroll;
   margin: 10px 20px 15px 20px;
   padding: 10px 5px;
+
   border: 1px solid black;
   border-radius: 20px;
   display: grid;
