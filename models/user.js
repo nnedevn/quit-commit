@@ -29,7 +29,12 @@ var userSchema = new mongoose.Schema({
   },
   quitDate: {
     type: Date,
-  }
+  },
+  journalEntries: [{
+    moodRating: {type:Number},
+    journalEntry:{type:String},
+    createdOn:{type:Date}
+  }]
 
 });
 
@@ -44,7 +49,8 @@ userSchema.set('toJSON', {
       yearsSmoked: ret.yearsSmokedm,
       quitDate: ret.quitDate,
       cigsPerDay: ret.cigsPerDay,
-      yearsSmoked: ret.yearsSmoked
+      yearsSmoked: ret.yearsSmoked,
+      journalEntries: ret.journalEntries
     };
     return returnJson;
   }

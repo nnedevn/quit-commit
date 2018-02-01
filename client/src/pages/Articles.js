@@ -3,13 +3,12 @@ import Feed from 'rss-to-json';
 
 const Artic = (props) => {
   const options = props.results.map((item)=>(
-    <li>
-      <h2>{item.title}</h2>
-      <a href={item.url}>{item.url}</a>
+    <div className="articles-in">
+      <a href={item.url}><h2>{item.title}</h2></a>
       <div dangerouslySetInnerHTML={{ __html: item.description }} />
-    </li>
+    </div>
   ))
-  return <ul>{options}</ul>
+  return <div className="articles-out">{options}</div>
 }
 
 class Articles extends Component{
@@ -24,7 +23,6 @@ class Articles extends Component{
   loadData = () => {
     let that = this;
     Feed.load('http://blog.quitstopnow.com/rss.xml', function(err, rss){
-      console.log(rss.items);
       that.setState({
         articles: rss.items
       })

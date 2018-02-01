@@ -4,7 +4,12 @@ var path = require('path');
 var favicon = require('serve-favicon');
 var logger = require('morgan');
 var bodyParser = require('body-parser');
+var socket = require('socket.io');
 var app = express();
+
+server = app.listen(8080, function(){
+    console.log('server is running on port 8080')
+});
 
 // Mongoose stuff
 var mongoose = require('mongoose');
@@ -23,9 +28,19 @@ app.use(function(req, res, next) {
   next();
 });
 
+// Sockets
+io = socket(server);
+
+io.on('connection', (socket) => {
+    console.log(socket.id);
+    socket.on('SEND_MESSAGE', function(data){
+      io.emit('RECEIVE_MESSAGE', data);
+    })
+});
+
 // Controllers
 app.use('/auth', require('./routes/auth'));
-
+app.use('/user', require('./routes/user'));
 app.get('*', function(req, res, next) {
 	res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
 });

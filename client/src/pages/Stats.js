@@ -54,7 +54,7 @@ class Stats extends Component {
 
   render() {
     if (this.props.user && this.props.user.name) {
-      
+
       let cigsNotSmoked = (this.state.days * this.props.user.cigsPerDay) + Math.round(this.state.hours * (this.props.user.cigsPerDay / 24));
 
       let moneyNotSpent = (.478 * cigsNotSmoked).toFixed(2);
