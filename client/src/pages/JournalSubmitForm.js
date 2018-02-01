@@ -16,9 +16,11 @@ class JournalSubmitForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
-    axios.put('/user/journal', {
+    axios.put('/user/journal/new', {
       moodRating: this.state.moodRating,
-      journalEntry: this.state.journalEntry
+      journalEntry: this.state.journalEntry,
+      dateAndTime: new Date(),
+      userId:this.props.user.id
     });
   }
 
