@@ -271,6 +271,7 @@ html {
   overflow: scroll;
   display: flex;
   flex-direction: column-reverse;
+}
 
 .uploadbtn {
   color: black;
@@ -286,4 +287,3 @@ html {
   font-size: 28px;
   margin-right: 5px;
 }
-
