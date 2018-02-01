@@ -17,7 +17,7 @@ class Journal extends Component {
   }
 
   content = () => {
-    
+
     if (this.state.showForm){
       return <JournalSubmitForm user={this.props.user}/>
     } else {
