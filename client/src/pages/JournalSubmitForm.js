@@ -20,7 +20,9 @@ class JournalSubmitForm extends Component {
       moodRating: this.state.moodRating,
       journalEntry: this.state.journalEntry,
       userId:this.props.user.id
-    });
+    }).then(function(result){
+      console.log(result.data.user);
+    }).catch(err=>console.log(err));
   }
 
   render() {
