@@ -17,9 +17,7 @@ class Connect extends Component{
     });
 
     const addMessage = data => {
-        console.log(data);
         this.setState({messages: [...this.state.messages, data]});
-        console.log(this.state.messages);
     };
 
     this.sendMessage = ev => {
@@ -28,7 +26,6 @@ class Connect extends Component{
             author: this.props.user.name,
             message: this.state.message
         });
-        console.log(this.state.message);
         this.setState({message: ''});
     }
 

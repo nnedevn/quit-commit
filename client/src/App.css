@@ -187,6 +187,26 @@ html {
   box-sizing: inherit;
 }
 
+.btn-circle {
+  width: 80px;
+  height: 80px;
+  padding: 6px 0px;
+  border-radius: 30px;
+  text-align: center;
+  font-size: 24px;
+  line-height: 1.42857;
+  color: blue;
+  font-size: 24px;
+  position: fixed;
+  bottom: 80px;
+  right: 60px;
+  z-index: 10;
+}
+
+.lower-right-buttons {
+  position: relative;
+}
+
 .stories-in {
   width: 95%;
   height: 350px;
