@@ -32,7 +32,7 @@ var userSchema = new mongoose.Schema({
   },
   journalEntries: [{
     moodRating: {type:Number},
-    journalEntrie:{type:String},
+    journalEntry:{type:String},
     createdOn:{type:Date}
   }]
 
