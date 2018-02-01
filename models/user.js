@@ -29,7 +29,12 @@ var userSchema = new mongoose.Schema({
   },
   quitDate: {
     type: Date,
-  }
+  },
+  journalEntries: [{
+    moodRating: {type:Number},
+    journalEntrie:{type:String},
+    createdOn:{type:Date}
+  }]
 
 });
 
