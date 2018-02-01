@@ -193,21 +193,13 @@ html {
   box-sizing: inherit;
 }
 
-<<<<<<< HEAD
 .stories-in {
   width: 95%;
   height: 350px;
   overflow: scroll;
   margin: 10px 20px 15px 20px;
   padding: 10px 5px;
-=======
-.stories-li {
-  width: 80%;
-  height: 350px;
-  overflow: scroll;
-  margin: 20px;
-  padding: 0px 5px;
->>>>>>> bf82d511deb5d029cdc36843bacde321ecbe9cb7
+
   border: 1px solid black;
   border-radius: 20px;
   display: grid;
