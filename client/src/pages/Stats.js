@@ -52,6 +52,16 @@ class Stats extends Component {
     // TODO: Stop the timer just in case;
   }
 
+  statImage = () => {
+    if(this.props.user.rewards.length !== 0 ){
+      console.log("there is an image")
+      return <img className="dash-image" src={this.props.user.rewards[0].rewardUrl} />;
+    } else {
+      console.log('there is no image')
+      return
+    }
+  }
+
   render() {
     if (this.props.user && this.props.user.name) {
 
@@ -62,9 +72,6 @@ class Stats extends Component {
       return (
         <div>
           <h2>{this.props.user.name}'s Dashboard</h2>
-          <div>
-            {this.state.quitDateEpoch}
-          </div>
           <div className="icon-cont">
             <div className="dash-icon">
               <h4>You have been smoke free for {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
@@ -80,6 +87,9 @@ class Stats extends Component {
             </div>
             <div className="dash-icon">
               <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
+            </div>
+            <div className="dash-icon">
+            {this.statImage()}
             </div>
           </div>
         </div>);

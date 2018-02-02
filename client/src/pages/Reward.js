@@ -19,9 +19,9 @@ class Reward extends Component {
         rewardUrl: this.state.url,
         rewardPrice: this.state.price,
         userId: this.props.user.id
-      }).then(function(){
-        window.location = "/reward";
       });
+        window.location = '/stats'
+        console.log('cliiicked');
   }
 
   handleChange = (e) =>{
@@ -49,7 +49,7 @@ class Reward extends Component {
           <h3>How Much Does It Cost?</h3>
           <form onSubmit={this.handleSubmit}>
             <span className="dollasign">$</span>
-            <input className="cash-input" type="integer" onChange={this.handleChange} />
+            <input className="cash-input" type="integer" onChange={this.handleChange} required/>
             <input className="cash-input" type="submit" value="submit" placeholder="Count em up!" />
             <h3>Heres How Long It Will take to Save Up</h3>
           </form>
