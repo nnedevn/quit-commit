@@ -62,41 +62,42 @@ class Signup extends Component {
     }
     else {
       form = (<form onSubmit={this.handleSubmit}>
-        <div>
+        <div class="signup-form">
           <input name="Name"
             placeholder="What is your first name?"
             value={this.state.name}
             onChange={this.handleNameChange}
           />
         </div>
-        <div>
+        <div class="signup-form">
           <input name="Email"
             placeholder="What is your email?"
             value={this.state.email}
             onChange={this.handleEmailChange} />
         </div>
-        <div>
+        <div class="signup-form">
           <input name="Password"
             placeholder="Choose a password"
             type="password"
             value={this.state.password}
             onChange={this.handlePasswordChange} />
         </div>
-        <div>
+        <div class="signup-form">
           <input name="cigsPerDay"
             placeholder="How many cigarettes did you smoke a day?"
             type="integer"
             value = {this.state.cigsPerDay}
             onChange={this.handleCigsPerDayChange} />
         </div>
-        <div>
+        <div class="signup-form">
           <input name="Duration"
             placeholder="How many years did you smoke?"
             type="integer"
             value={this.state.yearsSmoked}
             onChange={this.handleYearsSmokedChange} />
         </div>
-        <div>
+        <h4 className="quit-date">When Did You Quit?</h4>
+        <div class="signup-form">
           <input name="quitDate"
             placeholder="How many years did you smoke?"
             type="date"
