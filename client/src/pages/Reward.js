@@ -49,8 +49,8 @@ class Reward extends Component {
           <h3>How Much Does It Cost?</h3>
           <form onSubmit={this.handleSubmit}>
             <span className="dollasign">$</span>
-            <input type="integer" onChange={this.handleChange} />
-            <input type="submit" value="submit" placeholder="Count em up!" />
+            <input className="cash-input" type="integer" onChange={this.handleChange} />
+            <input className="cash-input" type="submit" value="submit" placeholder="Count em up!" />
             <h3>Heres How Long It Will take to Save Up</h3>
           </form>
         </div>

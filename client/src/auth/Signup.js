@@ -92,14 +92,14 @@ class Signup extends Component {
         <div>
           <input name="Duration"
             placeholder="How many years did you smoke?"
-            type="integer" 
+            type="integer"
             value={this.state.yearsSmoked}
             onChange={this.handleYearsSmokedChange} />
         </div>
         <div>
           <input name="quitDate"
             placeholder="How many years did you smoke?"
-            type="date" 
+            type="date"
             value={this.state.quitDate}
             onChange={this.handleQuitDateChange} />
         </div>
