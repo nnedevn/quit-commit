@@ -3,7 +3,14 @@ import React, { Component } from 'react';
 class Home extends Component {
   render(){
     return (
-        <p>This is a home page. You probably ought to write something here</p>
+        <div className="home">
+          <div class="hero-image">
+            <div class="hero-text">
+              <h1>Do Not Smoke</h1>
+              <p>Seriously, quit it</p>
+            </div>
+          </div>
+        </div>
       );
   }
 }

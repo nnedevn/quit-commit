@@ -44,7 +44,7 @@ class Connect extends Component{
                               <div className="messages">
                                 {this.state.messages.map(message => {
                                   return (
-                                    <div>{message.author}: {message.message}</div>
+                                    <h2>{message.author}: {message.message}</h2>
                                   )
                                 })}
                               </div>
