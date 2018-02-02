@@ -35,22 +35,22 @@ class Mainsidebar extends React.Component {
     }
     const links = (
       <ul className="sidebarlinks">
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/stats">Stats</Link>
         </li>
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/journal">Journal</Link>
         </li>
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/reward">Reward</Link>
         </li>
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/connect">Connect</Link>
         </li>
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/articles">Articles</Link>
         </li>
-        <li>
+        <li onClick={this.handleViewSidebar}>
           <Link to="/stories">Stories</Link>
         </li>
       </ul>
