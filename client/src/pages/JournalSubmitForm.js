@@ -16,12 +16,17 @@ class JournalSubmitForm extends Component {
 
   handleSubmit = (e) => {
     e.preventDefault();
+    let base = this;
     axios.put('/user/journal/new', {
       moodRating: this.state.moodRating,
       journalEntry: this.state.journalEntry,
       userId:this.props.user.id
     }).then(function(result){
-      console.log(result.data.user);
+      let allTheEntries = []
+      for (let index in result.data.user.journalEntries){
+        allTheEntries.push(result.data.user.journalEntries[index]);
+      }
+      base.props.returnToJournalOnSubmit(allTheEntries[allTheEntries.length - 1]);
     }).catch(err=>console.log(err));
   }
 
@@ -33,7 +38,6 @@ class JournalSubmitForm extends Component {
             <label htmlFor="">How are you feeling?</label>
             <input name="moodRating" onChange={this.handleInput} type="number" />
           </div>
-          {console.log(this.props.user)}
           <div>
             <label htmlFor="">Tell me more</label>
             <textarea name="journalEntry" onChange={this.handleInput} id="" cols="30" rows="10"></textarea>
@@ -42,8 +46,6 @@ class JournalSubmitForm extends Component {
             <input type="submit" onClick={this.handleSubmit} value="submit" />
           </div>
         </form>
-        {console.log(this.state.moodRating)}
-        {console.log(this.state.journalEntry)}
       </div>
     );
   }

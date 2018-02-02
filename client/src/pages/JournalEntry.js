@@ -3,7 +3,12 @@ import React, {Component} from 'react';
 class JournalEntry extends Component{
   render(){
     return(
-      <div> Journal Entry: {this.props.entry}</div>
+      <div className="journal-entry"> 
+        <h4>Mood rating: {this.props.entry.moodRaiting}</h4>
+        <h5>Journal Entry: </h5>
+        <p>{this.props.entry.journalEntry}</p> 
+      </div>
+      
     )
   }
 }
