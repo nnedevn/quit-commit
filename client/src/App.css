@@ -304,3 +304,36 @@ html {
   font-size: 28px;
   margin-right: 5px;
 }
+
+.dash-icon {
+  height: 200px;
+  width: 200px;
+  border: 3px solid white;
+  border-radius: 8px;
+  justify-self: center;
+}
+
+.dash-icon h4 {
+  position: relative;
+  top: 60px;
+}
+
+.icon-cont {
+  grid-template-columns: auto auto auto;
+  display: grid;
+  grid-row-gap: 10px;
+  grid-column-gap: 10px;
+  margin: 0 ;
+}
+.cash-input {
+  background-color: blue;
+  border: inherit;
+  margin: 0 10px;
+}
+
+.signup-form {
+  background-color: blue;
+  color: white
+  padding 5px;
+  margin: 10px;
+}

@@ -59,20 +59,30 @@ class Stats extends Component {
 
       let moneyNotSpent = (.478 * cigsNotSmoked).toFixed(2);
 
-      return (<div>
-
-        <h2>HELLO AGAIN {this.props.user.name}!</h2>
-        <div>{this.state.quitDateEpoch}</div>
-        <h4>You have been smoke free for {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
-        <h4>You would have smoked {cigsNotSmoked} cigarets.</h4>
-        <h4>You would have spent an extra ${moneyNotSpent} </h4>
-        <h4>You've been smoking for {this.props.user.yearsSmoked} years</h4>
-        <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
-        <img className="div--cloud__image" src={this.props.user.rewards[0].rewardUrl}  />
-
-        <h1>Stats page</h1>
-
-      </div>);
+      return (
+        <div>
+          <h2>{this.props.user.name}'s Dashboard</h2>
+          <div>
+            {this.state.quitDateEpoch}
+          </div>
+          <div className="icon-cont">
+            <div className="dash-icon">
+              <h4>You have been smoke free for {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
+            </div>
+            <div className="dash-icon">
+              <h4>You would have smoked {cigsNotSmoked} cigarets.</h4>
+            </div>
+            <div className="dash-icon">
+              <h4>You would have spent an extra ${moneyNotSpent} </h4>
+            </div>
+            <div className="dash-icon">
+              <h4>You've been smoking for {this.props.user.yearsSmoked} years</h4>
+            </div>
+            <div className="dash-icon">
+              <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
+            </div>
+          </div>
+        </div>);
     }
     else {
       return (<p>Stats page</p>);
