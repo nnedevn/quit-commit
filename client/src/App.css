@@ -115,21 +115,23 @@ nav a:hover {
   line-height: 20px;
   margin: 10px 0;
   line-height: 5px;
+  font-size: 24px;
 }
 
 .sidebarlinks li a {
   margin: 20px 0;
   line-height: 20px;
+  color: white;
 }
 
 .sidebar {
   width: 180px;
   height: 100%;
-  margin-top: 69.5px;
+  margin-top: 70px;
   position: fixed;
   top: 0;
   background: rgba(0, 0, 0, .2);
-  color: #f3f3f3;
+  color: white;
   transition: 0.4s ease-out;
 }
 
