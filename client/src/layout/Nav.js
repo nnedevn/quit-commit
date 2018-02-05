@@ -9,7 +9,7 @@ class Nav extends Component {
       links = (
         <div>
           <span>
-            <Link to="/profile">Profile</Link>
+            {/* <Link to="/profile">Profile</Link> */}
           </span>
           <span>
             <Logout updateUser={this.props.updateUser} />
@@ -27,7 +27,7 @@ class Nav extends Component {
     return(
         <div>
           <nav className="nav">
-            <a href="/">Home</a>
+            {/* <a href="/">Home</a> */}
             {links}
           </nav>
         </div>
