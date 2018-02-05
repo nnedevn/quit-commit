@@ -8,7 +8,7 @@ class Journal extends Component {
     this.state = {
       showForm: false,
       journalEntries: [],
-      buttonValue: 'Show'
+      buttonClass: 'fas fa-plus-circle'
     }
   }
 
@@ -41,7 +41,6 @@ class Journal extends Component {
         return <JournalEntry entry={entry} />
       });
       return thing;
-
     }
   }
 
@@ -49,7 +48,7 @@ class Journal extends Component {
     this.setState({
       showForm: !this.state.showForm
     })
-    this.state.showForm ? this.setState({ buttonValue: "Show" }) : this.setState({ buttonValue: "Hide" });
+    this.state.showForm ? this.setState({ buttonClass: "fas fa-plus-circle" }) : this.setState({ buttonClass: "fas fa-minus-circle" });
   }
 
   render() {
@@ -57,8 +56,12 @@ class Journal extends Component {
     return (
       <div>
         {this.content()}
-        <input type="button" value={this.state.buttonValue} onClick={this.toggleForm} />
+
         {this.journalContent}
+        <div className="lower-right-buttons">
+          <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fas fa-plus-circle"></i></button>
+          <button type="button" onClick={this.toggleForm} class="btn btn-default btn-circle btn-xl"><i class={this.state.buttonClass}></i></button>
+        </div>
       </div>
     );
   }

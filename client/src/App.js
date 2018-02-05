@@ -103,10 +103,7 @@ class App extends Component {
             </div>
           </div>
         </Router>
-        <div className="lower-right-buttons">
-          <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fas fa-plus-circle"></i></button>
-          <button type="button" class="btn btn-default btn-circle btn-xl"><i class="fas fa-exclamation-circle"></i></button>
-        </div>
+        
         <Footer />
       </div>
     );
