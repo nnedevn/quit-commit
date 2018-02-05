@@ -54,10 +54,10 @@ class Stats extends Component {
 
   statImage = () => {
     if(this.props.user.rewards.length !== 0 ){
-      console.log("there is an image")
+      
       return <img className="dash-image" src={this.props.user.rewards[0].rewardUrl} />;
     } else {
-      console.log('there is no image')
+      
       return
     }
   }
