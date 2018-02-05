@@ -58,7 +58,7 @@ class Stats extends Component {
       return <img className="dash-image" src={this.props.user.rewards[0].rewardUrl} />;
     } else {
       
-      return
+      return <a href="/reward"><p>Reward yourself</p></a>
     }
   }
 
@@ -71,10 +71,11 @@ class Stats extends Component {
 
       return (
         <div>
-          <h2>{this.props.user.name}'s Dashboard</h2>
+          <h2>{this.props.user.name}&lsquo;s Dashboard</h2>
           <div className="icon-cont">
             <div className="dash-icon">
-              <h4>You have been smoke free for {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
+              <h3>Smoke free for:</h3>
+              <h4> {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
             </div>
             <div className="dash-icon">
               <h4>You would have smoked {cigsNotSmoked} cigarets.</h4>
@@ -83,7 +84,7 @@ class Stats extends Component {
               <h4>You would have spent an extra ${moneyNotSpent} </h4>
             </div>
             <div className="dash-icon">
-              <h4>You've been smoking for {this.props.user.yearsSmoked} years</h4>
+              <h4>You&lsquo;ve been smoking for {this.props.user.yearsSmoked} years</h4>
             </div>
             <div className="dash-icon">
               <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
