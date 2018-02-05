@@ -1,20 +1,22 @@
 # Summary
- A full-stack MERN app, originally adapted from [Jenna Badanowski](https://github.com/jbadan/meanImageEditor)!
-
+  Quit-commit is an aplication designed to aid smokers in quitting the habbit.
+  The application visualizes statistics, such as money saved, cigarettes not smoked and others. 
+  There is a chat, which connects the user with other application users. 
+  The user can also browse through artiles related to quitting smoking, as well as read through other people's stories from a redit thread.  
+  
 # Demo
 
-[Demo deployed on Heroku](https://mern-thingy.herokuapp.com/)
+[Demo deployed on Heroku](Coming soon)
 
 # Technologies Used
 * Mongodb
 * Express
 * React
 * Node.js
+* Socket.io
 
-# Backend Routes
-METHOD | URL | Purpose
---- | --- | ---
-POST | /auth/signup | Adds new user to user database
-POST | /auth/login | Authenticates login details
-POST | /auth/me/from/token | Checks if token is present on browser refresh
+# Screenshots:
+
+# TODO
+- [ ] 
 
