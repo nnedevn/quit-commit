@@ -95,6 +95,41 @@ form {
   float: right;
 }
 
+.ic1 {
+  background-image: url("https://lh3.googleusercontent.com/Zmjn6q5E4nN5RzdDeAcCKvVw3BcY8bmcc_Ib5fbsndxlv9YmHeRc4nMDXX2PoX3ICEw=w300");
+  background-size: cover;
+  text-shadow: 2px 2px 2px black;
+  background-color:rgba(0, 0, 0, 0.5);
+}
+
+.ic2 {
+  background-image: url("https://www.hindustantimes.com/rf/image_size_960x540/HT/p2/2017/08/07/Pictures/_2602c2a2-7b6d-11e7-a713-31f90463e8eb.jpg");
+  background-size: cover;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ic3 {
+  background-image: url("https://img.purch.com/rc/300x200/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzA3My83NDIvb3JpZ2luYWwvc21va2luZy1tb25leS0xNTAyMDMuanBn");
+  background-size: cover;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ic4 {
+  background-image: url("https://eutopialaw.files.wordpress.com/2012/03/calendar.jpg?w=300&h=216");
+  background-size: cover;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.ic5 {
+  background-image: url("https://res.cloudinary.com/rebelwalls/image/upload/b_black,c_fill,fl_progressive,h_533,q_auto,w_800/v1428564257/article/R10171_image1");
+  background-size: cover;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 /* DEFAULT STYLES FROM CREATE REACT APP MODULE */
 .App {
   text-align: center;
@@ -139,9 +174,10 @@ form {
   margin-top: 70px;
   position: fixed;
   top: 0;
-  background: rgba(0, 0, 0, .2);
   color: white;
   transition: 0.4s ease-out;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 
 .sidebar--open {
@@ -223,6 +259,22 @@ html {
   position: relative;
 }
 
+.journal-entry {
+  width: 33%;
+  height: 150px;
+  overflow: scroll;
+  margin: 2.5% 0% 0% 2.5%;
+  padding: 10px 5px;
+  border: 6px solid white;
+  border-radius: 20px;
+  display: grid;
+  text-align: center;
+}
+
+.journals {
+  display: flex;
+}
+
 .stories-in {
   width: 95%;
   height: 350px;
@@ -274,12 +326,10 @@ html {
 }
 
 .hero-image {
-  background-image: url("https://cdn-thumbs.freeart.com/cigarettes-on-black_fa1113274.jpg");
-  height: 50%;
-  background-position: center;
-  background-repeat: no-repeat;
+  width: 100%;
+  height: 400px;
+  background-image: url("http://www.onyxrsch.com/images/CO2/Smoking_Money.jpg?1478616897");
   background-size: cover;
-  position: relative;
 }
 
 .hero-text {
@@ -289,6 +339,8 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+  text-shadow: 2px 2px 2px black;
+  background-color: rgba(0, 0, 0, 0.5);
 }
 
 .chat {
@@ -343,6 +395,11 @@ html {
   grid-column-gap: 10px;
   margin: 0 ;
 }
+
+.icon-cont h3 {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
 .cash-input {
   background-color: blue;
   border: inherit;

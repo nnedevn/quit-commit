@@ -54,7 +54,7 @@ class Journal extends Component {
   render() {
 
     return (
-      <div>
+      <div className="journals">
         {this.content()}
 
         {this.journalContent}

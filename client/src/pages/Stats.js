@@ -55,10 +55,10 @@ class Stats extends Component {
   statImage = () => {
     if(this.props.user.rewards.length !== 0 ){
 
-      
+
       return <img className="dash-image" src={this.props.user.rewards[0].rewardUrl} />;
     } else {
-      
+
       return <a href="/reward"><p>Reward yourself</p></a>
 
     }
@@ -75,23 +75,23 @@ class Stats extends Component {
         <div>
           <h2>{this.props.user.name}&lsquo;s Dashboard</h2>
           <div className="icon-cont">
-            <div className="dash-icon">
+            <div className="dash-icon ic1">
               <h3>Smoke free for:</h3>
-              <h4> {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h4>
+              <h3> {this.state.days} days, {this.state.hours} hours, {this.state.mins} minutes and {this.state.seconds} seconds.</h3>
             </div>
-            <div className="dash-icon">
-              <h4>You would have smoked {cigsNotSmoked} cigarets.</h4>
+            <div className="dash-icon ic2">
+              <h3>You would have smoked {cigsNotSmoked} cigarettes.</h3>
             </div>
-            <div className="dash-icon">
-              <h4>You would have spent an extra ${moneyNotSpent} </h4>
+            <div className="dash-icon ic3">
+              <h3>You would have spent an extra ${moneyNotSpent} </h3>
             </div>
-            <div className="dash-icon">
-              <h4>You&lsquo;ve been smoking for {this.props.user.yearsSmoked} years</h4>
+            <div className="dash-icon ic4">
+              <h3>You&lsquo;ve been smoking for {this.props.user.yearsSmoked} years</h3>
             </div>
-            <div className="dash-icon">
-              <h4>You've smoked  {this.props.user.cigsPerDay} cigs per day</h4>
+            <div className="dash-icon ic5">
+              <h3>You've smoked  {this.props.user.cigsPerDay} cigs per day</h3>
             </div>
-            <div className="dash-icon">
+            <div className="dash-icon ic6">
             {this.statImage()}
             </div>
           </div>
