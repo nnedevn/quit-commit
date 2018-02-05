@@ -6,8 +6,8 @@ class Home extends Component {
         <div className="home">
           <div class="hero-image">
             <div class="hero-text">
-              <h1>Do Not Smoke</h1>
-              <p>Seriously, quit it</p>
+              <h1>Commit to Quit</h1>
+              <p>Helping End the Habit</p>
             </div>
           </div>
         </div>

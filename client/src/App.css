@@ -273,6 +273,8 @@ html {
 
 .journals {
   display: flex;
+  padding: 20px;
+  justify-content: center;
 }
 
 .stories-in {
@@ -339,8 +341,8 @@ html {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
-  text-shadow: 2px 2px 2px black;
-  font-size: 56px;
+  text-shadow: 4px 4px 4px black;
+  font-size: 65px;
 }
 
 .chat {
@@ -394,6 +396,7 @@ html {
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   margin: 0 ;
+  padding: 20px;
 }
 
 .icon-cont h3 {
