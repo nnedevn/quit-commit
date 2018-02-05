@@ -327,8 +327,8 @@ html {
 
 .hero-image {
   width: 100%;
-  height: 400px;
-  background-image: url("http://www.onyxrsch.com/images/CO2/Smoking_Money.jpg?1478616897");
+  height: 600px;
+  background-image: url("http://wallpaperose.com/wp-content/uploads/2013/07/Smoking-Money-Wallpaper.jpg");
   background-size: cover;
 }
 
@@ -369,8 +369,8 @@ html {
 }
 
 .dash-icon {
-  height: 200px;
-  width: 200px;
+  height: 275px;
+  width: 100%;
   border: 6px solid white;
   border-radius: 20px;
   justify-self: center;
