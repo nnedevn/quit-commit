@@ -13,10 +13,7 @@ class Mainsidebar extends React.Component {
   }
 
   handleViewSidebar() {
-    //Works
-    console.log('sidebar open',this.state.sidebarOpen);
-    console.log('sidebar width',this.state.sidebarWidth);
-  	this.setState({ sidebarOpen: !this.state.sidebarOpen });
+    this.setState({ sidebarOpen: !this.state.sidebarOpen });
   }
 
   setWidth(width) {
@@ -63,7 +60,7 @@ class Mainsidebar extends React.Component {
           slideFrom={slideFrom.left}
           width={this.state.sidebarWidth}
         >
-           {links}
+          {links}
         </Sidebar>
         <Content transition={transitionTypes.push} sidebarWidth={this.state.sidebarWidth}>
         </Content>
@@ -77,37 +74,30 @@ class Mainsidebar extends React.Component {
 
 class Sidebar extends React.Component {
 
-  componentDidMount() {
-    console.log('is open prop', this.props.isOpen);
-    console.log('width prop', this.props.width);
-    console.log('this.sidebar', this.sidebar);
-  }
-
   render() {
-    const overlayOpen = this.props.isOpen ? 'overlay overlay--open' : 'overlay' ;
-    const sidebarOpen = this.props.isOpen ? 'sidebar sidebar--open' : 'sidebar' ;
-    const slideFrom = (this.props.isOpen) ? '' : 'sidebar--left' ;
+    const overlayOpen = this.props.isOpen ? 'overlay overlay--open' : 'overlay';
+    const sidebarOpen = this.props.isOpen ? 'sidebar sidebar--open' : 'sidebar';
+    const slideFrom = (this.props.isOpen) ? '' : 'sidebar--left';
     const classNames = [sidebarOpen, slideFrom].join(' ');
-    console.log('classnames', classNames);
 
     return (
       <div>
-      {this.props.showOverlay ? (
-        <div>
-          <div className={overlayOpen} />
-          <div className={classNames} ref={(element) => {this.sidebar = element; }}>
-            <div className='sidebar__menu'>
-              {this.props.children}
+        {this.props.showOverlay ? (
+          <div>
+            <div className={overlayOpen} />
+            <div className={classNames} ref={(element) => { this.sidebar = element; }}>
+              <div className='sidebar__menu'>
+                {this.props.children}
+              </div>
             </div>
           </div>
-        </div>
-      ) : (
-        <div className={classNames} ref={(element) => {this.sidebar = element; }}>
-          <div className='sidebar__menu'>
-            {this.props.children}
-          </div>
-        </div>
-      )}
+        ) : (
+            <div className={classNames} ref={(element) => { this.sidebar = element; }}>
+              <div className='sidebar__menu'>
+                {this.props.children}
+              </div>
+            </div>
+          )}
       </div>
     );
   }
