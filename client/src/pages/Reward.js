@@ -20,8 +20,7 @@ class Reward extends Component {
         rewardPrice: this.state.price,
         userId: this.props.user.id
       });
-        window.location = '/stats'
-        console.log('cliiicked');
+        window.location = '/stats';
   }
 
   handleChange = (e) =>{
