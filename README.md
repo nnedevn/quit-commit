@@ -18,5 +18,10 @@
 # Screenshots:
 
 # TODO
-- [ ] 
+ * Implement Mood Visualizations  
+ * Implement Reward Badges
+ * Improve responsiveness
+ * Implement a countdown to reward
+ 
+
 
