@@ -36,14 +36,15 @@ class JournalSubmitForm extends Component {
         <form action="">
           <div>
             <label htmlFor="">How are you feeling?</label>
-            <input name="moodRating" onChange={this.handleInput} type="number" />
+            <input className="form-control" name="moodRating" onChange={this.handleInput} type="number" />
           </div>
           <div>
             <label htmlFor="">Tell me more</label>
-            <textarea name="journalEntry" onChange={this.handleInput} id="" cols="30" rows="10"></textarea>
+            <textarea name="journalEntry" className="form-control" id="" rows="10" onChange={this.handleInput} ></textarea>
           </div>
+          <br />
           <div>
-            <input type="submit" onClick={this.handleSubmit} value="submit" />
+            <input className="btn btn-primary mb-2" type="submit" onClick={this.handleSubmit} value="submit" />
           </div>
         </form>
       </div>
