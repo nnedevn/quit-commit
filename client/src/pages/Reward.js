@@ -37,19 +37,20 @@ class Reward extends Component {
     return(
       <div>
         <div className="treat-title">
-          <h1>Treat Yo Self</h1>
+          <h1>Reward Yourself</h1>
         </div>
         <div className="reward-desc">
-          <h2>What do you want to do with all that cash you are saving? </h2>
-          <h4>Throw a picture up here to remind yourself what youre working towards!</h4>
+          <h4>Picture what you are working towards!</h4>
         </div>
         <Upload getUrl={this.getUrl} />
-        <div>
+        <div className="reward-inputs">
           <h3>How Much Does It Cost?</h3>
           <form onSubmit={this.handleSubmit}>
             <span className="dollasign">$</span>
-            <input className="cash-input" type="integer" onChange={this.handleChange} required/>
-            <input className="cash-input" type="submit" value="submit" placeholder="Count em up!" />
+            <input type="integer" onChange={this.handleChange} required/>
+            <br />
+            <br /> 
+            <input className="btn btn-primary mb-2" type="submit" value="submit" placeholder="Count em up!" />
             <h3>Heres How Long It Will take to Save Up</h3>
           </form>
         </div>

@@ -59,7 +59,7 @@ class Stats extends Component {
       return <img className="dash-image" src={this.props.user.rewards[0].rewardUrl} />;
     } else {
 
-      return <a href="/reward"><p>Reward yourself</p></a>
+      return <a href="/reward"><h3 ClassName="reward-text">Reward yourself</h3></a>
 
     }
   }
