@@ -23,5 +23,5 @@
  * Improve responsiveness
  * Implement a countdown to reward
  
-This is yet another test. 
+This is yet another test.. 
 
