@@ -22,6 +22,4 @@
  * Implement Reward Badges
  * Improve responsiveness
  * Implement a countdown to reward
- 
-Testing Kraken.
 
